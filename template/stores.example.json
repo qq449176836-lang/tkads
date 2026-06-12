@@ -1,0 +1,22 @@
+{
+  "current_shop_id": "your_shop_id",
+  "shop_region": "MY",
+  "stores": [
+    {
+      "id": "store_1",
+      "name": "Your Store Name",
+      "shop_id": "your_shop_id",
+      "shop_cursor": "",
+      "platform": "tiktok",
+      "region": "MY",
+      "ad_accounts": [
+        {
+          "id": "your_ad_account_id",
+          "name": "Main Ad Account",
+          "currency": "MYR",
+          "timezone": "Asia/Kuala_Lumpur"
+        }
+      ]
+    }
+  ]
+}
