@@ -41,27 +41,41 @@ python scripts/daily-collect.py
 
 ```
 tkads/
-├── docs/                  # 架构文档
+├── docs/                      # 架构文档
 │   ├── tkads-v4-architecture.md
 │   ├── tkads-automation.md
 │   ├── tkads-daily-collection.md
 │   ├── evolution-engine.md
 │   └── self-evolution.md
-├── scripts/               # 核心脚本（已去敏）
-│   ├── config_chain.py    # 配置链
-│   ├── daily-collect.py   # 每日采集入口
-│   ├── self-evolve.js     # 自进化引擎
-│   ├── monitor.py         # 系统监控
+├── scripts/                   # 核心脚本
+│   ├── daily-collect.py       # 每日采集入口
+│   ├── collect_full_rankings.js    # 店铺全量排名采集
+│   ├── collect_daily_products.js   # 商品逐日数据采集
+│   ├── collect_product_analysis.js  # 商品深度分析采集
+│   ├── collect_content_daily.js     # 内容拆分（LIVE/视频/商品卡）
+│   ├── daily-report.py        # 广告日报自动推送
+│   ├── daily-creator-report.py # 达人日报自动推送
+│   ├── compass_api_explore.js  # API字段探索工具
+│   ├── store_config.py        # 店铺配置管理
+│   ├── store_utils.py         # 店铺工具函数
+│   ├── config_chain.py        # 配置链
+│   ├── self-evolve.js         # 自进化引擎
+│   ├── catalog-check.js       # 目录校验
+│   ├── monitor.py             # 系统监控
 │   └── ...
-├── skills/                # Hermes Agent 技能
-│   ├── ad-automation/     # 广告自动化
-│   ├── data-collection/   # 数据采集
+├── dashboard/                  # 数据看板
+│   ├── server.py              # FastAPI 后端
+│   ├── index.html             # 前端页面(5个Tab)
+│   └── db_config.py           # 数据库配置
+├── skills/                    # Hermes Agent 技能
+│   ├── ad-automation/gmvmax/  # 广告自动化
+│   ├── data-collection/tkads-daily/
 │   ├── hermes-evolution-engine/
 │   └── hermes-self-evolve/
-├── template/              # 安装模板
+├── template/                  # 安装模板
 │   ├── env.example
 │   └── stores.example.json
-├── setup.sh               # 一键安装
+├── setup.sh                   # 一键安装
 └── README.md
 ```
 
