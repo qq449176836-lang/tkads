@@ -1,0 +1,30 @@
+# TKADS v4 .gitignore
+
+# 环境配置（含密钥）
+.env
+.env.local
+
+# 敏感数据
+*.db
+*.sqlite
+*.ghtoken
+
+# 运行时文件
+__pycache__/
+node_modules/
+*.pyc
+*.pyo
+
+# 日志
+*.log
+/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
