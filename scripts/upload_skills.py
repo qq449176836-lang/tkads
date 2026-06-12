@@ -2,7 +2,7 @@
 """上传Hermes技能包到GitHub（按功能分类）"""
 import json, urllib.request, base64, os
 
-TOKEN = os.environ.get("GH_TOKEN", "").strip(), ".tkads", ".ghtoken")).read().strip()
+TOKEN = os.environ.get("GITHUB_TOKEN", "")  # 从环境变量读取，勿硬编码
 BASE = "https://api.github.com/repos/qq449176836-lang/hermes/contents"
 home = os.path.expanduser("~")
 
