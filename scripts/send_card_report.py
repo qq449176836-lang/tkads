@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import urllib.request, json
 
-url = 'https://open.feishu.cn/open-apis/bot/v2/hook/ac6f80eb-1393-4526-b1cf-7a435919b4c5'
+url = 'https://open.feishu.cn/open-apis/bot/v2/hook/7fa6f848-b53f-40bb-a5f3-cf2b393cfb6a'
 
 card = {
     "msg_type": "interactive",
