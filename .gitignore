@@ -11,26 +11,6 @@ __pycache__/
 .ghtoken
 *_token*
 
-# Temp / exploration
-tmp/
-reports/
-explore_*.js
-intercept_*.js
-test_*.js
-capture_*.js
-check_*.js
-probe_*.js
-patch_*.js
-dump_*.js
-find_*.js
-live_*.js
-scan_*.js
-*.cjs
-*cjs
-
-# Duplicates / generated
-restructure-*.py
-
 # OS
 .DS_Store
 Thumbs.db
