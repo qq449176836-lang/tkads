@@ -25,10 +25,10 @@ if os.path.exists(WEBHOOK_PATH):
         FEISHU_WEBHOOK = f.read().strip()
 
 CRON_JOBS = {
-    'daily-collect':       {'schedule': '0 7 * * *'},
+    '店铺广告采集':       {'schedule': '0 7 * * *'},
     'daily-github-backup': {'schedule': '0 11 * * *'},
-    'daily-ad-report':     {'schedule': '0 9 * * *'},
-    'daily-creator-report':{'schedule': '0 9 * * *'},
+    'AI自动化-广告日报':     {'schedule': '0 9 * * *'},
+    'AI自动化-达人日报':{'schedule': '0 9 * * *'},
     'cron-guardian':       {'schedule': 'every 120m'},
 }
 
