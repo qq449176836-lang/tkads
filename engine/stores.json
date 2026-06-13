@@ -1,0 +1,55 @@
+{
+  "_comment_version": "Master config file for tkads system — single source of truth for store configurations.",
+  "_comment_generated": "Generated from hardcoded values in tkads.js, collect_day_by_day.py, api.py, daily-report.py",
+
+  "version": "1.0",
+  "active_store": "hanmac",
+
+  "defaults": {
+    "_comment": "Default values applied to all stores unless overridden",
+    "budget": 20,
+    "roi_target": 1.2
+  },
+
+  "gates": {
+    "_comment": "Gate rules that control feature availability — all enabled by default",
+    "enabled_by_default": [
+      "not_legacy",
+      "spu_available",
+      "ad_type_modifiable",
+      "ad_exists",
+      "naming_rule",
+      "catalog_health"
+    ]
+  },
+
+  "constitution": {
+    "_comment": "IMMUTABLE rules of the system — these must NEVER be violated",
+    "rules": [
+      "NEVER modify ROI or budget of legacy plans with existing data",
+      "All automation ads MUST be named '自动化-<SPU_ID>'",
+      "Each automation plan MUST contain exactly 1 product",
+      "Do NOT change timezone or start time (use defaults)",
+      "New ads must check SPU availability first"
+    ]
+  },
+
+  "stores": {
+    "hanmac": {
+      "_comment": "Hanmac.my — primary store on TikTok Seller Malaysia",
+      "shop_name": "Hanmac.my",
+      "seller_domain": "seller-my.tiktok.com",
+      "profile_id": "k1456ta2",
+      "sid": "7494105016200037977",
+      "aadvid": "7569565674088136705",
+      "tid": "7494105046161482189",
+      "ads_url": "http://local.adspower.net:50325",
+      "shop_id": "7494105016200037977",
+      "bc_id": "7545376144372318224",
+      "creator_uid": "7550180591812412432",
+      "country": "MY",
+      "currency": "USD",
+      "timezone": "Asia/Shanghai"
+    }
+  }
+}

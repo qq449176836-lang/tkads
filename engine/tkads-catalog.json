@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-06-12T00:00:00Z",
+  "tkads_version": "4.0.0",
+  "catalog_url": "file://~/.tkads/tkads-catalog.json",
+
+  "plugins": {
+    "notify-feishu": {
+      "name": "飞书通知插件",
+      "version": "1.0.0",
+      "type": "hook",
+      "hooks": ["after:create_ad", "after:collect", "after:report"],
+      "requires_tkads": ">=4.0.0",
+      "bundled": true,
+      "tags": ["notification", "feishu"]
+    },
+    "audit-log": {
+      "name": "审计日志插件",
+      "version": "1.0.0",
+      "type": "hook",
+      "hooks": ["after:*"],
+      "requires_tkads": ">=4.0.0",
+      "bundled": true,
+      "tags": ["audit", "logging"]
+    },
+    "gate-check": {
+      "name": "宪法门禁插件",
+      "version": "1.0.0",
+      "type": "hook",
+      "hooks": ["before:pause_ad", "before:update_roi", "before:create_ad"],
+      "requires_tkads": ">=4.0.0",
+      "bundled": true,
+      "tags": ["gate", "constitution"]
+    }
+  },
+
+  "commands": {
+    "tkads.ad.list": {
+      "name": "广告列表",
+      "action": "list",
+      "handler": "tkads.js",
+      "description": "列出所有GMV Max广告",
+      "args": "[天数]",
+      "requires": [],
+      "tags": ["ad", "read"]
+    },
+    "tkads.ad.pause": {
+      "name": "暂停广告",
+      "action": "pause",
+      "handler": "tkads.js",
+      "description": "暂停指定广告",
+      "args": "<campaign_id>",
+      "requires": ["gate-check"],
+      "tags": ["ad", "write"]
+    },
+    "tkads.ad.update-roi": {
+      "name": "更新ROI目标",
+      "action": "update_roi",
+      "handler": "tkads.js",
+      "description": "更新指定广告的ROI目标",
+      "args": "<campaign_id> <roi_target>",
+      "requires": ["gate-check"],
+      "tags": ["ad", "write"]
+    },
+    "tkads.ad.activate": {
+      "name": "激活广告",
+      "action": "activate",
+      "handler": "tkads.js",
+      "description": "激活指定广告",
+      "args": "<campaign_id>",
+      "requires": [],
+      "tags": ["ad", "write"]
+    },
+    "tkads.export": {
+      "name": "导出数据",
+      "action": "export",
+      "handler": "tkads.js",
+      "description": "导出广告数据到CSV",
+      "args": "[天数]",
+      "requires": [],
+      "tags": ["data", "export"]
+    },
+    "tkads.gmv-rank": {
+      "name": "GMV排名",
+      "action": "gmv_rank",
+      "handler": "tkads.js",
+      "description": "查看GMV排名前N的广告",
+      "args": "<top_n>",
+      "requires": [],
+      "tags": ["analytics", "read"]
+    },
+    "tkads.config": {
+      "name": "配置管理",
+      "action": "config",
+      "handler": "tkads.js",
+      "description": "查看或更新配置",
+      "args": "[key] [value]",
+      "requires": [],
+      "tags": ["config", "admin"]
+    }
+  },
+
+  "scripts": {
+    "daily-collect": {
+      "name": "每日数据采集",
+      "path": "~/.hermes/scripts/daily-collect.py",
+      "schedule": "07:00",
+      "requires_db": ["analytics.db"],
+      "version": "1.0.0",
+      "tags": ["collection"]
+    },
+    "daily-report": {
+      "name": "GMV日报",
+      "path": "~/.hermes/scripts/daily-report.py",
+      "schedule": "09:00",
+      "requires_db": ["analytics.db"],
+      "hooks": ["after:report"],
+      "version": "1.0.0",
+      "tags": ["report"]
+    },
+    "daily-creator-report": {
+      "name": "达人视频日报",
+      "path": "~/.hermes/scripts/daily-creator-report.bat",
+      "script_real": "C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/scripts/daily-creator-report.py",
+      "schedule": "09:00",
+      "version": "1.0.0",
+      "tags": ["report", "creator"]
+    },
+    "daily-github-backup": {
+      "name": "GitHub备份",
+      "path": "~/.hermes/scripts/daily-github-backup.py",
+      "schedule": "11:00",
+      "requires_db": ["analytics.db"],
+      "version": "1.0.0",
+      "tags": ["backup"]
+    },
+    "quick-probe": {
+      "name": "快速探针",
+      "path": "~/.hermes/scripts/monitor-fast.bat",
+      "script_real": "C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/scripts/monitor.py",
+      "schedule": "每30分钟",
+      "version": "1.0.0",
+      "tags": ["monitor"]
+    },
+    "cron-guardian": {
+      "name": "完整体检",
+      "path": "~/.hermes/scripts/cron-guardian.bat",
+      "script_real": "C:/Users/Administrator/AppData/Roaming/cn.org.hermesagent.desktop/runtime/hermes-home/scripts/monitor.py",
+      "schedule": "每2小时",
+      "version": "2.0.0",
+      "tags": ["monitor"]
+    },
+    "self-evolve": {
+      "name": "自进化引擎",
+      "path": "~/.tkads/self-evolve.js",
+      "schedule": "每2小时（随 cron-guardian 触发）",
+      "version": "1.0.0",
+      "tags": ["evolution", "core"]
+    }
+  },
+
+  "databases": {
+    "campaign_meta": {
+      "path": "~/.tkads/campaign_meta.db",
+      "purpose": "广告元数据（campaign_id + ad_id + start_time + spu_id）",
+      "schema_version": "1.0"
+    },
+    "analytics": {
+      "path": "~/.tkads/data/analytics.db",
+      "purpose": "分析数据（daily_stats, operation_log_v2, posts_30d, creators_30d）",
+      "schema_version": "2.0"
+    }
+  },
+
+  "versions": {
+    "config-chain": "1.0.0",
+    "hook-engine": "1.0.0",
+    "gate-engine": "1.0.0",
+    "degrade-engine": "1.0.0",
+    "config_chain.py": "1.0.0",
+    "db_v2.py": "1.0.0"
+  }
+}

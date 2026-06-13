@@ -41,41 +41,54 @@ python scripts/daily-collect.py
 
 ```
 tkads/
+├── engine/                     # 核心引擎 (v4)
+│   ├── tkads.js               # 统一引擎(自动唤醒+检测)
+│   ├── api.py                 # API body构建
+│   ├── db.py / db_v2.py       # 数据库操作
+│   ├── config_chain.py        # 配置链
+│   ├── gate-engine.js         # 7门禁引擎
+│   ├── hook-engine.js         # 钩子引擎
+│   ├── degrade-engine.js      # 降级引擎
+│   ├── config-chain.js        # 配置链JS版
+│   ├── gmvmax-create-v4.cjs   # 广告创建
+│   └── tkads-catalog.json     # 版本化目录
+├── evolution/                  # 双循环自进化引擎
+│   ├── orchestrator.js        # 协调器(P1扫描/P2分析/P3加载)
+│   ├── autoloader.js          # 技能使用频率分析+自动加载
+│   ├── explorer.js            # GitHub技能探索
+│   ├── reviewer.js            # 会话蒸馏
+│   ├── update_autoloader.js   # 全量技能扫描维护
+│   └── usage.json             # 技能使用统计
 ├── docs/                      # 架构文档
 │   ├── tkads-v4-architecture.md
 │   ├── tkads-automation.md
 │   ├── tkads-daily-collection.md
 │   ├── evolution-engine.md
-│   └── self-evolution.md
-├── scripts/                   # 核心脚本
+│   ├── self-evolution.md
+│   └── tkads-gmv-max-api-catalog.md   # API端点全量目录
+├── notes/                     # 方法论知识库
+│   ├── hermes-methodology/    # 29章方法论 + API目录
+│   └── hermes-agent-knowledge/ # 官方文档解读
+├── scripts/                   # 核心采集脚本
 │   ├── daily-collect.py       # 每日采集入口
-│   ├── collect_full_rankings.js    # 店铺全量排名采集
-│   ├── collect_daily_products.js   # 商品逐日数据采集
-│   ├── collect_product_analysis.js  # 商品深度分析采集
-│   ├── collect_content_daily.js     # 内容拆分（LIVE/视频/商品卡）
-│   ├── daily-report.py        # 广告日报自动推送
-│   ├── daily-creator-report.py # 达人日报自动推送
-│   ├── compass_api_explore.js  # API字段探索工具
-│   ├── store_config.py        # 店铺配置管理
-│   ├── store_utils.py         # 店铺工具函数
-│   ├── config_chain.py        # 配置链
-│   ├── self-evolve.js         # 自进化引擎
-│   ├── catalog-check.js       # 目录校验
-│   ├── monitor.py             # 系统监控
+│   ├── daily-report.py        # 广告日报
+│   ├── daily-creator-report.py # 达人日报
+│   ├── e_logger.py            # E层日志系统
+│   ├── e_log_viewer.py        # 日志查看器
+│   ├── self_evolve_check.sh   # 自进化自检
 │   └── ...
 ├── dashboard/                  # 数据看板
 │   ├── server.py              # FastAPI 后端
-│   ├── index.html             # 前端页面(5个Tab)
+│   ├── index.html             # 前端页面
 │   └── db_config.py           # 数据库配置
 ├── skills/                    # Hermes Agent 技能
-│   ├── ad-automation/gmvmax/  # 广告自动化
+│   ├── ad-automation/gmvmax/
 │   ├── data-collection/tkads-daily/
 │   ├── hermes-evolution-engine/
 │   └── hermes-self-evolve/
 ├── template/                  # 安装模板
-│   ├── env.example
-│   └── stores.example.json
 ├── setup.sh                   # 一键安装
+├── SOP.md                     # 操作标准流程
 └── README.md
 ```
 

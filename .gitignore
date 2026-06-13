@@ -1,30 +1,40 @@
-# TKADS v4 .gitignore
-
-# 环境配置（含密钥）
-.env
-.env.local
-
-# 敏感数据
-*.db
-*.sqlite
-*.ghtoken
-
-# 运行时文件
+# Python
 __pycache__/
-node_modules/
 *.pyc
 *.pyo
+*.db
+*.sqlite
 
-# 日志
-*.log
-/logs/
+# Environment
+.env
+.env.*
+.ghtoken
+*_token*
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Temp / exploration
+tmp/
+reports/
+explore_*.js
+intercept_*.js
+test_*.js
+capture_*.js
+check_*.js
+probe_*.js
+patch_*.js
+dump_*.js
+find_*.js
+live_*.js
+scan_*.js
+*.cjs
+*cjs
 
-# 系统文件
+# Duplicates / generated
+restructure-*.py
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
+package-lock.json

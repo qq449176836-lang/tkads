@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.1",
+  "updated_at": "2026-06-13",
+  "skills": {
+    "tkads-automation": {
+      "name": "TikTok广告自动化管理",
+      "usage_count": 42,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": [
+        "after:collect",
+        "after:report"
+      ]
+    },
+    "tkads-daily-collection": {
+      "name": "每日广告数据采集",
+      "usage_count": 35,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": [
+        "after:collect"
+      ]
+    },
+    "adspower-gmvmax": {
+      "name": "GMV Max广告自动化创建",
+      "usage_count": 18,
+      "last_used": "2026-06-12",
+      "auto_load": true,
+      "hooks_required": [
+        "after:create_ad",
+        "after:update_roi"
+      ]
+    },
+    "hermes-evolution-engine": {
+      "name": "自进化引擎",
+      "usage_count": 8,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": [
+        "after:evolve"
+      ]
+    },
+    "github": {
+      "name": "GitHub工作流",
+      "usage_count": 15,
+      "last_used": "2026-06-12",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "web-search": {
+      "name": "网络搜索",
+      "usage_count": 25,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "file-operations": {
+      "name": "文件操作",
+      "usage_count": 30,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "code-execution": {
+      "name": "代码执行",
+      "usage_count": 28,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "windows-screenshot-recognition": {
+      "name": "Windows截图识别",
+      "usage_count": 8,
+      "last_used": "2026-06-10",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "plan": {
+      "name": "任务计划制定",
+      "usage_count": 12,
+      "last_used": "2026-06-08",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "requesting-code-review": {
+      "name": "代码审查与质量门禁",
+      "usage_count": 6,
+      "last_used": "2026-06-05",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "ocr-and-documents": {
+      "name": "OCR文档处理",
+      "usage_count": 4,
+      "last_used": "2026-06-01",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "hermes-agent-skill-authoring": {
+      "name": "Skill编写与维护",
+      "usage_count": 7,
+      "last_used": "2026-06-09",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "systematic-debugging": {
+      "name": "系统调试",
+      "usage_count": 5,
+      "last_used": "2026-06-06",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "test-driven-development": {
+      "name": "测试驱动开发",
+      "usage_count": 3,
+      "last_used": "2026-05-20",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "ima-skill": {
+      "name": "IMA知识库管理",
+      "usage_count": 6,
+      "last_used": "2026-06-07",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "notion": {
+      "name": "Notion笔记",
+      "usage_count": 2,
+      "last_used": "2026-05-15",
+      "auto_load": true,
+      "hooks_required": []
+    },
+    "google-workspace": {
+      "name": "Google Workspace",
+      "usage_count": 1,
+      "last_used": "2026-04-20",
+      "auto_load": false,
+      "hooks_required": []
+    },
+    "obsidian": {
+      "name": "Obsidian笔记",
+      "usage_count": 2,
+      "last_used": "2026-05-10",
+      "auto_load": false,
+      "hooks_required": []
+    },
+    "powerpoint": {
+      "name": "PPT处理",
+      "usage_count": 1,
+      "last_used": "2026-04-01",
+      "auto_load": false,
+      "hooks_required": []
+    },
+    "hermes-methodology-toolkit": {
+      "name": "方法论全套工具包",
+      "usage_count": 1,
+      "last_used": "2026-06-12",
+      "auto_load": true,
+      "hooks_required": [
+        "after:evolve"
+      ]
+    },
+    "hermes-operations": {
+      "name": "实战操作守则",
+      "usage_count": 1,
+      "last_used": "2026-06-12",
+      "auto_load": true,
+      "hooks_required": [
+        "after:evolve"
+      ]
+    },
+    "vikingdb-knowledge": {
+      "name": "VikingDB知识库集成",
+      "usage_count": 1,
+      "last_used": "2026-06-13",
+      "auto_load": true,
+      "hooks_required": [
+        "after:evolve"
+      ]
+    },
+    "tkads-api-architecture": {
+      "name": "TikTok seller center API architecture and collection techniques",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": true,
+      "created": "2026-06-13"
+    },
+    "apple": {
+      "name": "apple",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "apple",
+      "added": "2026-06-13"
+    },
+    "macos-computer-use": {
+      "name": "macos-computer-use",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "apple",
+      "added": "2026-06-13"
+    },
+    "coding-agents": {
+      "name": "coding-agents",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "autonomous-ai-agents",
+      "added": "2026-06-13"
+    },
+    "hermes-agent": {
+      "name": "hermes-agent",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "autonomous-ai-agents",
+      "added": "2026-06-13"
+    },
+    "architecture-diagram": {
+      "name": "architecture-diagram",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "ascii-art": {
+      "name": "ascii-art",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "ascii-video": {
+      "name": "ascii-video",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "baoyu-infographic": {
+      "name": "baoyu-infographic",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "claude-design": {
+      "name": "claude-design",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "comfyui": {
+      "name": "comfyui",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "design-md": {
+      "name": "design-md",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "excalidraw": {
+      "name": "excalidraw",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "humanizer": {
+      "name": "humanizer",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "manim-video": {
+      "name": "manim-video",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "p5js": {
+      "name": "p5js",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "popular-web-designs": {
+      "name": "popular-web-designs",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "pretext": {
+      "name": "pretext",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "sketch": {
+      "name": "sketch",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "songwriting-and-ai-music": {
+      "name": "songwriting-and-ai-music",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "touchdesigner-mcp": {
+      "name": "touchdesigner-mcp",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "creative",
+      "added": "2026-06-13"
+    },
+    "jupyter-live-kernel": {
+      "name": "jupyter-live-kernel",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "data-science",
+      "added": "2026-06-13"
+    },
+    "kanban-orchestrator": {
+      "name": "kanban-orchestrator",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "devops",
+      "added": "2026-06-13"
+    },
+    "kanban-worker": {
+      "name": "kanban-worker",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "devops",
+      "added": "2026-06-13"
+    },
+    "himalaya": {
+      "name": "himalaya",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "email",
+      "added": "2026-06-13"
+    },
+    "media": {
+      "name": "media",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "media",
+      "added": "2026-06-13"
+    },
+    "mlops": {
+      "name": "mlops",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "mlops",
+      "added": "2026-06-13"
+    },
+    "airtable": {
+      "name": "airtable",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "productivity",
+      "added": "2026-06-13"
+    },
+    "maps": {
+      "name": "maps",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "productivity",
+      "added": "2026-06-13"
+    },
+    "teams-meeting-pipeline": {
+      "name": "teams-meeting-pipeline",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "productivity",
+      "added": "2026-06-13"
+    },
+    "godmode": {
+      "name": "godmode",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "red-teaming",
+      "added": "2026-06-13"
+    },
+    "llm-wiki": {
+      "name": "llm-wiki",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "research",
+      "added": "2026-06-13"
+    },
+    "research-paper-writing": {
+      "name": "research-paper-writing",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "research",
+      "added": "2026-06-13"
+    },
+    "openhue": {
+      "name": "openhue",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "smart-home",
+      "added": "2026-06-13"
+    },
+    "xurl": {
+      "name": "xurl",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "social-media",
+      "added": "2026-06-13"
+    },
+    "spike": {
+      "name": "spike",
+      "usage_count": 0,
+      "last_used": "",
+      "auto_load": false,
+      "category": "software-development",
+      "added": "2026-06-13"
+    }
+  },
+  "auto_load_list": [
+    "tkads-automation",
+    "tkads-daily-collection",
+    "adspower-gmvmax",
+    "hermes-evolution-engine",
+    "github",
+    "web-search",
+    "file-operations",
+    "code-execution",
+    "windows-screenshot-recognition",
+    "plan",
+    "requesting-code-review",
+    "ocr-and-documents",
+    "hermes-agent-skill-authoring",
+    "systematic-debugging",
+    "test-driven-development",
+    "ima-skill",
+    "notion",
+    "hermes-methodology-toolkit",
+    "hermes-operations",
+    "vikingdb-knowledge",
+    "tkads-api-architecture"
+  ]
+}
